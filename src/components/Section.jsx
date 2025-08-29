@@ -1,4 +1,4 @@
-import { use, useState } from "react"
+import { use, useState,useEffect} from "react"
 
 const users =[{
     "id": 1,
@@ -17,6 +17,8 @@ const users =[{
 ]
 export const Section = () => {
     const [cont,setCont] = useState(0)
+    const [UserApi,setUserApi] = useEffect([])
+    userEffect(() => {
     const handleClick = () => {
         setCont(cont + 1)
         console.log("evento de contador") + cont
